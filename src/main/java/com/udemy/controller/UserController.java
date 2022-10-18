@@ -2,9 +2,11 @@ package com.udemy.controller;
 
 import com.udemy.model.User;
 import com.udemy.service.UserService;
+import com.udemy.service.UserServiceDBImpl;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -14,8 +16,18 @@ public class UserController {
 
     private final UserService userService;
 
+//    @Inject
+//    public UserController(@Named("UserServiceListImpl") UserService userService) {
+//        this.userService = userService;
+//    }
+
     @Inject
-    public UserController(UserService userService) {
+    public UserController(@Named("UserServiceDBImpl") UserService userService) {
+        this.userService = userService;
+    }
+
+    @Inject
+    public UserController(UserServiceDBImpl userService) {
         this.userService = userService;
     }
 
