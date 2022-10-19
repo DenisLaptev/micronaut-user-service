@@ -1,7 +1,6 @@
 package com.udemy.model;
 
 import io.micronaut.core.annotation.Introspected;
-import io.micronaut.data.annotation.MappedEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,16 +18,17 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private int id;
-    @NotBlank
-    @Column
-    private String name;
-    @NotBlank
-    @Column
-    private String mobileNumber;
-    @NotBlank
-    @Column
-    private String email;
 
+    @NotBlank
+    @Column(name="name")
+    private String name;
+
+    @NotBlank
+    @Column(name="mobileNumber")
+    private String mobileNumber;
+
+    @NotBlank
+    @Column(name="email")
+    private String email;
 }

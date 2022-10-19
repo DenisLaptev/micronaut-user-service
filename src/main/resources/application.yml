@@ -1,6 +1,8 @@
 micronaut:
   application:
     name: userService
+  server:
+    port: ${SERVER_PORT:8080}
 netty:
   default:
     allocator:
@@ -20,5 +22,14 @@ jpa:
     properties:
       hibernate:
         hbm2ddl:
-          auto: update
+          auto: none
         show_sql: true
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+
+shedlock:
+  defaults:
+    lock-at-most-for: 1m

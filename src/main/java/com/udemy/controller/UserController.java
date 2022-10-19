@@ -1,6 +1,7 @@
 package com.udemy.controller;
 
 import com.udemy.model.User;
+import com.udemy.model.UserResponse;
 import com.udemy.service.UserService;
 import com.udemy.service.UserServiceDBImpl;
 import io.micronaut.http.HttpResponse;
@@ -43,9 +44,14 @@ public class UserController {
         return HttpResponse.ok(userService.getAllUsers());
     }
 
+//    @Get("/{id}")
+//    public HttpResponse<User> getUser(@PathVariable int id) {
+//        return HttpResponse.ok(userService.getUser(id));
+//    }
+
     @Get("/{id}")
-    public HttpResponse<User> getUser(@PathVariable int id) {
-        return HttpResponse.ok(userService.getUser(id));
+    public HttpResponse<UserResponse> getUser(@PathVariable int id) {
+        return HttpResponse.ok(userService.getUserResponse(id));
     }
 
     @Put("/{id}")

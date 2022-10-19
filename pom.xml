@@ -46,11 +46,13 @@
             <artifactId>micronaut-http-server-netty</artifactId>
             <scope>compile</scope>
         </dependency>
+<!--Http Client for communication between MicroServices-->
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-http-client</artifactId>
             <scope>compile</scope>
         </dependency>
+<!--Http Client for communication between MicroServices-->
         <dependency>
             <groupId>io.micronaut</groupId>
             <artifactId>micronaut-runtime</artifactId>
@@ -90,6 +92,7 @@
             <artifactId>logback-classic</artifactId>
             <scope>runtime</scope>
         </dependency>
+<!--flyway for DB migration-->
         <dependency>
             <groupId>io.micronaut.flyway</groupId>
             <artifactId>micronaut-flyway</artifactId>
@@ -99,6 +102,9 @@
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-mysql</artifactId>
         </dependency>
+<!--flyway for DB migration-->
+
+<!--shedlock-->
         <dependency>
             <groupId>net.javacrumbs.shedlock</groupId>
             <artifactId>shedlock-micronaut</artifactId>
@@ -109,6 +115,7 @@
             <artifactId>shedlock-provider-jdbc-micronaut</artifactId>
             <version>4.34.0</version>
         </dependency>
+<!--shedlock-->
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
